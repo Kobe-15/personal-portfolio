@@ -13,4 +13,4 @@ Personal portfolio built with React + Vite, showcasing my projects, skills, and 
 3. `npm run dev`
 
 ## Live Site
-[your-deployed-url-here]
+kobedee.vercel.app
