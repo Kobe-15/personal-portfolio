@@ -888,17 +888,12 @@ nav {
   padding: 20px 80px;
   position: sticky;
   top: 0;
-  background: rgba(24, 27, 34, 0.85); /* lighter + slightly transparent */
+  background: rgba(24, 27, 34, 0.85);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   z-index: 100;
-  border-bottom: 1px solid rgba(79, 142, 247, 0.15); /* subtle blue-tinted border instead of plain gray */
+  border-bottom: 1px solid rgba(79, 142, 247, 0.15);
   transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-.nav-hidden {
-  opacity: 0;
-  pointer-events: none;
 }
 
 .nav-logo {

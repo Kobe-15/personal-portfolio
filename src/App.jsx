@@ -58,15 +58,6 @@ function App() {
   return (
     <div>
       <Starfield />
-      <nav className={activeSection === 'intro' ? 'nav-hidden' : ''}>
-        <div className="nav-links">
-          <a href="#intro" className={activeSection === 'intro' ? 'active' : ''}>Home</a>
-          <a href="#about" className={activeSection === 'about' ? 'active' : ''}>About</a>
-          <a href="#skills" className={activeSection === 'skills' ? 'active' : ''}>Skills</a>
-          <a href="#projects" className={activeSection === 'projects' ? 'active' : ''}>Projects</a>
-          <a href="#contact" className={activeSection === 'contact' ? 'active' : ''}>Contact</a>
-        </div>
-      </nav>
 
       <section id="intro">
         <h1>Hi there, I'm <span className="intro-name">Kobe</span> — nice to meet you.</h1>
@@ -87,6 +78,16 @@ function App() {
           <span className="scroll-cue-arrow">↓</span>
         </a>
       </section>
+
+      <nav>
+        <div className="nav-links">
+          <a href="#intro" className={activeSection === 'intro' ? 'active' : ''}>Home</a>
+          <a href="#about" className={activeSection === 'about' ? 'active' : ''}>About</a>
+          <a href="#skills" className={activeSection === 'skills' ? 'active' : ''}>Skills</a>
+          <a href="#projects" className={activeSection === 'projects' ? 'active' : ''}>Projects</a>
+          <a href="#contact" className={activeSection === 'contact' ? 'active' : ''}>Contact</a>
+        </div>
+      </nav>
 
       <section id="about">
         <h2>About</h2>
