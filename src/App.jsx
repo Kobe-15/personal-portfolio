@@ -58,8 +58,7 @@ function App() {
   return (
     <div>
       <Starfield />
-      <nav>
-        <span className="nav-logo">SJK</span>
+      <nav className={activeSection === 'intro' ? 'nav-hidden' : ''}>
         <div className="nav-links">
           <a href="#intro" className={activeSection === 'intro' ? 'active' : ''}>Home</a>
           <a href="#about" className={activeSection === 'about' ? 'active' : ''}>About</a>
