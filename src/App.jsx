@@ -55,6 +55,19 @@ function App() {
     return () => document.removeEventListener('mousedown', handleClickOutside)
   }, [])
 
+
+  useEffect(() => {
+    if (selectedProject) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [selectedProject])
+
   return (
     <div>
       <Starfield />
