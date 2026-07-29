@@ -692,6 +692,37 @@ body {
   color: #e8e8ea;
 }
 
+.modal-results-images {
+  display: flex;
+  gap: 12px;
+  margin-top: 4px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  align-items: flex-start;
+}
+
+.modal-results-images .modal-flowchart-item {
+  flex: 0 0 auto;
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.modal-results-images .modal-flowchart-item img {
+  width: 100%;
+  max-height: 220px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.modal-results-images .modal-flowchart-item img:hover {
+  transform: scale(1.02);
+}
+
 @media (max-width: 600px) {
   .modal {
     padding: 28px 20px;
@@ -835,6 +866,19 @@ body {
   transform: scale(1.02);
 }
 
+.modal-flowchart-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-flowchart-caption {
+  margin-top: 6px;
+  font-size: 0.85rem;
+  color: #a0a0a0; /* muted, adjust to match your theme */
+  text-align: center;
+}
+
 .modal-flowchart-grid {
   display: flex;
   gap: 16px;
@@ -857,6 +901,11 @@ body {
   .modal-screenshots-scroll img {
     height: 180px;
   }
+
+  .modal-results-images .modal-flowchart-item img {
+  height: 160px;
+  }
+
 }
 
 .lightbox-overlay {

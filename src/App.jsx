@@ -323,20 +323,27 @@ function App() {
                 </div>
 
                 <div className="modal-section">
-                  <h3>{details.architectureLabel || 'System Architecture'}</h3>
-                  {details.architecture?.length > 0 ? (
-                    <div className="modal-flowchart-grid">
-                      {details.architecture.map((src, i) => (
-                        <img
-                          key={i}
-                          src={src}
-                          alt={`${details.architectureLabel || 'System Architecture'} ${i + 1}`}
-                          onClick={() => setLightboxImage(src)}
-                        />
+                  <h3>My Role</h3>
+                  <p>{details.role || '[Your role here]'}</p>
+                </div>
+
+                <div className="modal-section">
+                  <h3>Results</h3>
+                  <p>{details.results || '[Key results here]'}</p>
+                  {details.resultsImage && details.resultsImage.length > 0 && (
+                    <div className="modal-results-images">
+                      {details.resultsImage.map((item, i) => (
+                        <div key={i} className="modal-flowchart-item">
+                          <img
+                            src={item.src}
+                            alt={item.caption || `Result ${i + 1}`}
+                            style={{ borderRadius: '8px', cursor: 'pointer' }}
+                            onClick={() => setLightboxImage(item.src)}
+                          />
+                          {item.caption && <p className="modal-flowchart-caption">{item.caption}</p>}
+                        </div>
                       ))}
                     </div>
-                  ) : (
-                    <p>[{details.architectureLabel || 'Architecture'} diagram goes here]</p>
                   )}
                 </div>
 
@@ -377,10 +384,34 @@ function App() {
                 </div>
 
                 <div className="modal-section">
-                  <h3>My Role</h3>
-                  <p>{details.role || '[Your role here]'}</p>
+                  <h3>{details.architectureLabel || 'System Architecture'}</h3>
+                  {details.architecture?.length > 0 ? (
+                    <div className="modal-flowchart-grid">
+                      {details.architecture.map((item, i) => (
+                        <div key={i} className="modal-flowchart-item">
+                          <img
+                            src={item.src}
+                            alt={item.caption || `${details.architectureLabel || 'System Architecture'} ${i + 1}`}
+                            onClick={() => setLightboxImage(item.src)}
+                          />
+                          {item.caption && <p className="modal-flowchart-caption">{item.caption}</p>}
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <p>[{details.architectureLabel || 'Architecture'} diagram goes here]</p>
+                  )}
                 </div>
-                
+
+                <div className="modal-section">
+                  <h3>Tech Stack</h3>
+                  <div className="modal-tags">
+                    {selectedProject.tags.map(tag => (
+                      <span key={tag}>{tag}</span>
+                    ))}
+                  </div>
+                </div>
+
                 {details.team?.length > 0 && (
                   <div className="modal-section">
                     <h3>Team</h3>
@@ -399,32 +430,6 @@ function App() {
                   </div>
                 )}
 
-                <div className="modal-section">
-                  <h3>Results</h3>
-                  <p>{details.results || '[Key results here]'}</p>
-                  {details.resultsImage && details.resultsImage.length > 0 && (
-                    <div className="modal-screenshots">
-                      {details.resultsImage.map((src, i) => (
-                        <img
-                          key={i}
-                          src={src}
-                          alt={`Result ${i + 1}`}
-                          style={{ borderRadius: '8px', cursor: 'pointer' }}
-                          onClick={() => setLightboxImage(src)}
-                        />
-                      ))}
-                    </div>
-                  )}
-                </div>
-
-                <div className="modal-section">
-                  <h3>Tech Stack</h3>
-                  <div className="modal-tags">
-                    {selectedProject.tags.map(tag => (
-                      <span key={tag}>{tag}</span>
-                    ))}
-                  </div>
-                </div>
               </div>
             </div>
           )

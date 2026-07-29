@@ -1,10 +1,15 @@
 export const projectDetails = {
   'AirHaven': {
     coverImage: '/images/AirHaven/AirHaven-Prototype.png',
-    role: "I engineered the system's backend and predictive analytics pipeline, designing and training a Gradient Boosting Regression model to forecast air quality trends. I led backend development across the mobile and web platforms, building the data pipeline and inference layer in Python and integrating it with Firebase and Supabase for real-time storage and querying. I also handled data synchronization between these backend services and the React Native mobile app.",
+    role: "I engineered the system's backend and predictive analytics pipeline, designing and training a multi-output Gradient Boosting Regression model (scikit-learn) to forecast 7 air quality metrics simultaneously — including PM2.5, CO, NO2, and O3 — from a single architecture. To validate the model properly on time-series sensor data, I used time-aware cross-validation and per-target overfitting diagnostics rather than a single train/test split. I led backend development across the mobile and web platforms, building the data pipeline and inference layer in Python and integrating it with Firebase and Supabase for real-time storage and querying. I also handled data synchronization between these backend services and the React Native mobile app.",
     results: "Field deployment across 3 nodes collected 37,849 sensor readings over 13 days. PM₂.₅ measurements correlated at r = 0.852 (R² = 0.726) against the DENR-EMB government reference monitor, confirming the system's real-world viability. The Gradient Boosting forecasting model achieved R² = 0.92 for temperature and 0.81 for CO predictions. Usability testing with 385 public users and 2 institutional stakeholders (DENR-EMB, DEPS) returned 'Strongly Agree' ratings (4.2–4.7/5) across ease of use, information clarity, and trust in the system.",
-    resultsImage: ['/images/AirHaven/Result_Temperature.png', '/images/AirHaven/Result_CO.png'],
-    architecture: ['/images/AirHaven/System-Architecture.png'],
+    resultsImage: [
+      { src: '/images/AirHaven/Result_Temperature.png', caption: 'Temperature Actual vs Prediction' },
+      { src: '/images/AirHaven/Result_CO.png', caption: 'CO Actual vs Prediction' }
+    ],
+    architecture: [
+      { src: '/images/AirHaven/System-Architecture.png'},
+    ],
     screenshotsWeb: ['/images/AirHaven/Screenshot_web1.png', '/images/AirHaven/Screenshot_web2.png', '/images/AirHaven/Screenshot_web3.png'],
     screenshotsMobile: ['/images/AirHaven/Screenshot_app1.png', '/images/AirHaven/Screenshot_app2.png', '/images/AirHaven/Screenshot_app3.png'],
     team: [
@@ -22,7 +27,11 @@ export const projectDetails = {
     results: "Our team authored and executed a validation plan of 30 documented test cases across sign-up, login, search, and booking flows, with zero failures recorded across all completed tests. 20 cases were fully executed and passed; the remaining 10 (primarily edge-case and navigation scenarios) were documented and scoped but not run before the submission deadline. The project was successfully completed and defended before an academic panel.",
     resultsImage: null,
     architectureLabel: 'System Flowchart',
-    architecture: ['/images/CarGo/Overall.jpg', '/images/CarGo/Listing.jpg', '/images/CarGo/rent-payment.jpg'],
+    architecture: [
+      { src: '/images/CarGo/Overall.jpg', caption: 'Overall User Flow' },
+      { src: '/images/CarGo/Listing.jpg', caption: 'Car Listing & Booking Flow' },
+      { src: '/images/CarGo/rent-payment.jpg', caption: 'Rental Payment Flow' },
+    ],
     screenshotsWeb: ['/images/CarGo/CarGo_signup.png', '/images/CarGo/CarGo_home.png', '/images/CarGo/CarGo_service.png', '/images/CarGo/CarGo_listing.png', '/images/CarGo/CarGo_checkout.png'],
     screenshotsMobile: null,
     team: [
