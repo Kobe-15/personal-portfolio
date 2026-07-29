@@ -19,7 +19,7 @@ export const projectDetails = {
   'Car Rental Website: Car&Go': {
     coverImage: '/images/CarGo/CarGo_cover.png',
     role: 'As one of two developers on the team, I worked jointly across the entire stack rather than owning a single layer — collaborating closely with my co-developer on both frontend (HTML, CSS, JavaScript) and backend (PHP, MySQL) work throughout the platform, including the booking, listing, and checkout flows. Because we paired on nearly every feature rather than dividing by layer, I gained hands-on experience with the full request-to-database lifecycle of a web app, from UI to data persistence.',
-    results: "Validated core functionality through 30 documented test cases across sign-up, login, search, and booking flows — 20 passed outright, with the remaining cases (mainly edge-case validation and navigation flows) documented but not executed before submission, with zero failures recorded. The project was successfully completed and defended before an academic panel.",
+    results: "Our team authored and executed a validation plan of 30 documented test cases across sign-up, login, search, and booking flows, with zero failures recorded across all completed tests. 20 cases were fully executed and passed; the remaining 10 (primarily edge-case and navigation scenarios) were documented and scoped but not run before the submission deadline. The project was successfully completed and defended before an academic panel.",
     resultsImage: null,
     architectureLabel: 'System Flowchart',
     architecture: ['/images/CarGo/Overall.jpg', '/images/CarGo/Listing.jpg', '/images/CarGo/rent-payment.jpg'],
