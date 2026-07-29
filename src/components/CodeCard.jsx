@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { codeCardTokens } from '../data/codeCard'
 
-const TYPE_SPEED_MS = 15 // lower = faster typing
+const TYPE_SPEED_MS = 15 
 
 function CodeCard() {
   const [charCount, setCharCount] = useState(0)
@@ -17,7 +17,7 @@ function CodeCard() {
     return () => clearTimeout(timer)
   }, [charCount, totalLength])
 
-  // Slice each token based on how many characters have been "typed" so far
+  
   let offset = 0
   const visibleTokens = codeCardTokens.map((token, i) => {
     const start = offset

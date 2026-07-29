@@ -11,8 +11,8 @@ html, body {
 }
 
 body {
-  font-family: 'Inter', -apple-system, sans-serif; /* body text stays clean */
-  background-color: #05060a; /* darker than before — true night-sky black */
+  font-family: 'Inter', -apple-system, sans-serif; 
+  background-color: #05060a; 
   background-image:
     radial-gradient(ellipse at 10% 15%, rgba(56, 189, 248, 0.05), transparent 40%),
     radial-gradient(ellipse at 90% 20%, rgba(168, 85, 247, 0.06), transparent 45%),
@@ -103,12 +103,12 @@ body {
 .about-text p {
   line-height: 1.8;
   color: #9a9aa5;
-  margin: 0 0 14px 0; /* replaces the old flex `gap` spacing */
+  margin: 0 0 14px 0; 
 }
 
 .about-greeting,
 .about-role {
-  margin: 0 0 14px 0; /* same spacing, applied manually since gap is gone */
+  margin: 0 0 14px 0; 
 }
 
 .code-card {
@@ -432,7 +432,7 @@ body {
   justify-content: center;
   width: 44px;
   height: 44px;
-  background: #4f8ef7; /* solid fill instead of just outline */
+  background: #4f8ef7; 
   border: none;
   border-radius: 50%;
   color: #0d0f14;
@@ -1008,13 +1008,12 @@ nav a:hover {
   color: #e8e8ea;
 }
 
-/* Clamp the card description so long write-ups don't blow up the card;
-   the full text is still shown in the project modal's Overview section. */
+
 .project-description {
   color: #9a9aa5;
   line-height: 1.6;
   margin: 0;
-  height: 4.8em; /* line-height (1.6) × 3 lines */
+  height: 4.8em; 
   display: -webkit-box;
   -webkit-line-clamp: 3;
   line-clamp: 3;
@@ -1080,7 +1079,7 @@ nav a:hover {
   border-color: #4f8ef7;
 }
 
-/* "View Code" dropdown for projects with multiple repos (e.g. Website/Mobile/AI-ML) */
+
 .code-dropdown {
   position: relative;
   display: flex;
@@ -1164,7 +1163,7 @@ h1, h2, h3, h4,
 .about-greeting,
 .skill-category-title,
 .code-var {
-  font-family: 'Space Grotesk', sans-serif; /* bold geometric font for headings/emphasis */
+  font-family: 'Space Grotesk', sans-serif;  
   letter-spacing: 0.3px;
 }
 

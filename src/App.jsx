@@ -15,7 +15,7 @@ function App() {
   const [activeSection, setActiveSection] = useState('intro')
   const [openDropdown, setOpenDropdown] = useState(null)
   const dropdownRef = useRef(null)
-  const [formStatus, setFormStatus] = useState(null); // null | 'sending' | 'success' | 'error'
+  const [formStatus, setFormStatus] = useState(null); 
   const recaptchaRef = useRef(null);
 
   useEffect(() => {
@@ -31,7 +31,7 @@ function App() {
     },
     {
       root: null,
-      rootMargin: '-100px 0px -80% 0px', // treat the middle 20% of viewport as the "active zone"
+      rootMargin: '-100px 0px -80% 0px', 
       threshold: 0,
     }
   )
@@ -44,7 +44,7 @@ function App() {
   return () => observer.disconnect()
 }, [])
 
-  // Close the "View Code" dropdown when clicking anywhere outside of it
+  
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {

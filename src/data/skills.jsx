@@ -1,4 +1,3 @@
-// src/data/skills.jsx
 import { FaHtml5, FaCss3Alt, FaJava, FaPhp, FaReact, FaCode } from "react-icons/fa";
 import { SiJavascript, SiMysql, SiCplusplus, SiPython, SiScikitlearn, SiPandas, SiNumpy, SiFirebase, SiSupabase } from "react-icons/si";
 
