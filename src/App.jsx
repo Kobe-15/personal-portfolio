@@ -345,7 +345,7 @@ function App() {
 
                   {details.screenshotsWeb?.length > 0 && (
                     <>
-                      <h4>Web Dashboard</h4>
+                      <h4>Website</h4>
                       <div className="modal-screenshots-scroll">
                         {details.screenshotsWeb.map((src, i) => (
                           <img

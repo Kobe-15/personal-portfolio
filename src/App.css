@@ -675,8 +675,14 @@ body {
   color: #9a9aa5;
 }
 
+.modal-screenshots.modal-screenshots-mobile {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
 .modal-screenshots-mobile img {
-  flex: 0 1 150px;
+  flex: 0 0 150px;
 }
 
 .modal h2 {
